@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coffee Animation</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f8f9fa;
+      font-family: sans-serif;
+    }
+    img {
+      cursor: pointer;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    p {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p>take a sip of coffee to code 1 more line</p>
+  <img id="coffee" src="coffee_static.png" alt="Coffee">
+  
+  <script>
+    const coffee = document.getElementById('coffee');
+    coffee.addEventListener('click', () => {
+      coffee.src = "coffee_animate.gif";   // 換成動畫
+      setTimeout(() => {
+        coffee.src = "coffee_static.png";  // 播完動畫再換回靜態圖
+      }, 3000); // 3秒後換回，可依動畫長度調整
+    });
+  </script>
+</body>
+</html>
