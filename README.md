@@ -1,4 +1,4 @@
 # Coffee Animation
 
 Click the cup to see it in action ☕  
-[![take a sip of coffee to code 1 more line](coffee_static.png)](https://bohanc2.github.io/Coffee-animation/)
+[![take 2 sips of coffee to code 10 more lines](coffee_static.png)](https://bohanc2.github.io/Coffee-animation/)
