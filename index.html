@@ -20,23 +20,34 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     p {
-      margin-bottom: 20px;
-      font-size: 20px;
+      margin: 10px;
+      font-size: 18px;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <p>take a sip of coffee to code 1 more line</p>
+  <p>take 2 sip of coffee to code 10 more lines</p>
   <img id="coffee" src="coffee_static.png" alt="Coffee">
+  <p id="counter">☕ No coffee yet.</p>
 
   <script>
     const coffee = document.getElementById('coffee');
+    const counter = document.getElementById('counter');
+    let count = 0;
+
     coffee.addEventListener('click', () => {
-      coffee.src = "coffee_animate.gif";   // 換成動畫
+      // 換成動畫
+      coffee.src = "coffee_animate.gif";   
+
+      // 每次+2 口，代表寫 10 行
+      count += 2;
+      counter.innerText = `☕ You have taken ${count} sip${count > 1 ? 's' : ''} of coffee and written ${count / 2 * 10} line${count > 2 ? 's' : ''} of code.`;
+
+      // 播放完後換回靜態圖 (依照 GIF 長度調整毫秒)
       setTimeout(() => {
-        coffee.src = "coffee_static.png";  // 播完換回靜態圖
-      }, 3000); // 依照你的 GIF 動畫長度設定 (單位：毫秒)
+        coffee.src = "coffee_static.png";  
+      }, 3000);
     });
   </script>
 </body>
