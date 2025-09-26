@@ -29,14 +29,14 @@
 <body>
   <p>take a sip of coffee to code 1 more line</p>
   <img id="coffee" src="coffee_static.png" alt="Coffee">
-  
+
   <script>
     const coffee = document.getElementById('coffee');
     coffee.addEventListener('click', () => {
       coffee.src = "coffee_animate.gif";   // 換成動畫
       setTimeout(() => {
-        coffee.src = "coffee_static.png";  // 播完後換回靜態圖
-      }, 3000); // 依動畫長度調整
+        coffee.src = "coffee_static.png";  // 播完換回靜態圖
+      }, 3000); // 依照你的 GIF 動畫長度設定 (單位：毫秒)
     });
   </script>
 </body>
